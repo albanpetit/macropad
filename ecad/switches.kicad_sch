@@ -1941,7 +1941,7 @@
 		(dnp no)
 		(uuid "00015f83-c74b-4a79-9876-82ed03c2c272")
 		(property "Reference" "SW21"
-			(at 115.824 80.01 0)
+			(at 115.316 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2017,7 +2017,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 152.4 92.7099 90)
 			(effects
 				(font
@@ -2027,7 +2027,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 149.86 91.44 90)
 			(effects
 				(font
@@ -2105,7 +2105,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 101.6 92.7099 90)
 			(effects
 				(font
@@ -2115,7 +2115,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 99.06 91.44 90)
 			(effects
 				(font
@@ -2193,7 +2193,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 177.8 80.0099 90)
 			(effects
 				(font
@@ -2203,7 +2203,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 175.26 78.74 90)
 			(effects
 				(font
@@ -2273,7 +2273,7 @@
 		(dnp no)
 		(uuid "13051d59-f79f-4c53-8ae8-f6fe01cb8e95")
 		(property "Reference" "SW18"
-			(at 141.224 92.71 0)
+			(at 140.716 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2485,7 +2485,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 152.4 80.0099 90)
 			(effects
 				(font
@@ -2495,7 +2495,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 149.86 78.74 90)
 			(effects
 				(font
@@ -2565,7 +2565,7 @@
 		(dnp no)
 		(uuid "2bd99406-074f-4a51-bcd5-eee3bed9a5e7")
 		(property "Reference" "SW17"
-			(at 115.824 92.71 0)
+			(at 115.316 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2641,7 +2641,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 101.6 80.0099 90)
 			(effects
 				(font
@@ -2651,7 +2651,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 99.06 78.74 90)
 			(effects
 				(font
@@ -2797,7 +2797,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 101.6 130.8099 90)
 			(effects
 				(font
@@ -2807,7 +2807,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 99.06 129.54 90)
 			(effects
 				(font
@@ -2885,7 +2885,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 101.6 118.1099 90)
 			(effects
 				(font
@@ -2895,7 +2895,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 99.06 116.84 90)
 			(effects
 				(font
@@ -2973,7 +2973,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 177.8 130.8099 90)
 			(effects
 				(font
@@ -2983,7 +2983,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 175.26 129.54 90)
 			(effects
 				(font
@@ -3129,7 +3129,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 127 80.0099 90)
 			(effects
 				(font
@@ -3139,7 +3139,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 124.46 78.74 90)
 			(effects
 				(font
@@ -3285,7 +3285,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 127 105.4099 90)
 			(effects
 				(font
@@ -3295,7 +3295,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 124.46 104.14 90)
 			(effects
 				(font
@@ -3373,7 +3373,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 127 92.7099 90)
 			(effects
 				(font
@@ -3383,7 +3383,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 124.46 91.44 90)
 			(effects
 				(font
@@ -3597,7 +3597,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 152.4 130.8099 90)
 			(effects
 				(font
@@ -3607,7 +3607,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 149.86 129.54 90)
 			(effects
 				(font
@@ -3685,7 +3685,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 127 130.8099 90)
 			(effects
 				(font
@@ -3695,7 +3695,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 124.46 129.54 90)
 			(effects
 				(font
@@ -3773,7 +3773,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 177.8 105.4099 90)
 			(effects
 				(font
@@ -3783,7 +3783,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 175.26 104.14 90)
 			(effects
 				(font
@@ -3861,7 +3861,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 152.4 105.4099 90)
 			(effects
 				(font
@@ -3871,7 +3871,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 149.86 104.14 90)
 			(effects
 				(font
@@ -3941,7 +3941,7 @@
 		(dnp no)
 		(uuid "7e6de952-79b4-4cab-ac27-bbfaee7b4545")
 		(property "Reference" "SW16"
-			(at 90.424 92.71 0)
+			(at 89.916 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4017,7 +4017,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 101.6 105.4099 90)
 			(effects
 				(font
@@ -4027,7 +4027,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 99.06 104.14 90)
 			(effects
 				(font
@@ -4097,7 +4097,7 @@
 		(dnp no)
 		(uuid "7f0087b9-6620-4070-9810-d631a1b69a25")
 		(property "Reference" "SW20"
-			(at 90.424 80.01 0)
+			(at 89.916 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4165,7 +4165,7 @@
 		(dnp no)
 		(uuid "8f241cee-71b5-4aa2-86af-287288bd05f1")
 		(property "Reference" "SW22"
-			(at 141.224 80.01 0)
+			(at 140.716 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4445,7 +4445,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 127 118.1099 90)
 			(effects
 				(font
@@ -4455,7 +4455,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 124.46 116.84 90)
 			(effects
 				(font
@@ -4533,7 +4533,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 152.4 118.1099 90)
 			(effects
 				(font
@@ -4543,7 +4543,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 149.86 116.84 90)
 			(effects
 				(font
@@ -4825,7 +4825,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 177.8 92.7099 90)
 			(effects
 				(font
@@ -4835,7 +4835,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 175.26 91.44 90)
 			(effects
 				(font
@@ -4913,7 +4913,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Small"
+		(property "Value" "1N4148W"
 			(at 177.8 118.1099 90)
 			(effects
 				(font
@@ -4923,7 +4923,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 175.26 116.84 90)
 			(effects
 				(font
