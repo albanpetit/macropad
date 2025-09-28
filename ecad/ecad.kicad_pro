@@ -58,7 +58,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "missing_courtyard|154400000|132700000|3e6e2a15-f14a-41ea-83e0-bb5f3ffa84b7|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "missing_courtyard|161200000|139950000|00efd8b9-8873-45f1-bb75-80fad6c21659|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_overlap|157177325|124457225|5717df85-0979-4091-87b1-f9f6b4ecf13a|f310fd2c-f976-4ed6-80c8-364a5fc6bfd3",
+          ""
+        ],
+        [
+          "silk_overlap|164516702|138519027|1286ec40-050a-4b2c-9c50-2fe99aa32c3f|a90d4744-8e72-4fb6-adb8-bada4b3b2b4d",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -76,9 +93,9 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
-        "footprint_filters_mismatch": "ignore",
+        "footprint_filters_mismatch": "error",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "ignore",
+        "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_to_hole": "error",
         "holes_co_located": "warning",
@@ -92,13 +109,13 @@
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
-        "missing_courtyard": "ignore",
+        "missing_courtyard": "error",
         "missing_footprint": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
-        "npth_inside_courtyard": "ignore",
+        "npth_inside_courtyard": "error",
         "padstack": "warning",
-        "pth_inside_courtyard": "ignore",
+        "pth_inside_courtyard": "error",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
