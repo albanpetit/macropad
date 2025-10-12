@@ -1,6 +1,6 @@
 .DS_Store
 
-gerber.zip
+*.zip
 similar-project
 
 ## vscode gitignore
