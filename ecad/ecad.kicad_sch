@@ -7694,7 +7694,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_JAE_DX07S016JA1R1500"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_Amphenol_12401948E412A"
 			(at 254 40.64 0)
 			(effects
 				(font
@@ -9442,7 +9442,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 27.94 191.77 0)
 			(effects
 				(font
@@ -10005,7 +10005,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 50.8 191.77 0)
 			(effects
 				(font
@@ -10638,7 +10638,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 40.64 186.69 0)
 			(effects
 				(font
@@ -11440,7 +11440,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 50.8 186.69 0)
 			(effects
 				(font
@@ -11790,7 +11790,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 40.64 191.77 0)
 			(effects
 				(font
@@ -11855,7 +11855,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 17.78 191.77 0)
 			(effects
 				(font
@@ -11986,7 +11986,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 17.78 186.69 0)
 			(effects
 				(font
@@ -13490,7 +13490,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
 			(at 27.94 186.69 0)
 			(effects
 				(font
