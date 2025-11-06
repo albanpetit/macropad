@@ -305,16 +305,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "power_pin_not_driven|444500|228600|87a863b0-579c-4523-b14a-4543a86198db|00000000-0000-0000-0000-000000000000|/c0f07fb6-3dcb-4a50-a8d5-ad7e01e28010|/c0f07fb6-3dcb-4a50-a8d5-ad7e01e28010|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|444500|381000|e3fbccc6-641e-498e-8281-0983163c45c5|00000000-0000-0000-0000-000000000000|/c0f07fb6-3dcb-4a50-a8d5-ad7e01e28010|/c0f07fb6-3dcb-4a50-a8d5-ad7e01e28010|",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -578,7 +569,7 @@
       "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "../../../../Downloads/ecad.step",
+      "step": "../mcad/ecad-export.step",
       "svg": "",
       "vrml": ""
     },
