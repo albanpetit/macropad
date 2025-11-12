@@ -8408,7 +8408,7 @@
 				)
 			)
 		)
-		(property "Value" "Kailh choc v2"
+		(property "Value" "~"
 			(at 192.786 172.72 0)
 			(effects
 				(font
@@ -9688,7 +9688,7 @@
 				)
 			)
 		)
-		(property "Value" "Kailh choc v2"
+		(property "Value" "~"
 			(at 192.786 166.37 0)
 			(effects
 				(font
