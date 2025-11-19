@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "9.0.4"
+      "Version": "9.0.6"
     },
-    "CreationDate": "2025-10-10T02:19:09+02:00"
+    "CreationDate": "2025-11-19T21:58:38+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -15,7 +15,7 @@
     },
     "Size": {
       "X": 130.55,
-      "Y": 112.7
+      "Y": 115.05
     },
     "LayerNumber": 4,
     "BoardThickness": 1.579,
@@ -48,12 +48,12 @@
     },
     {
       "Path": "ecad-In1_Cu.gbr",
-      "FileFunction": "Copper,L5,Inr",
+      "FileFunction": "Copper,L2,Inr",
       "FilePolarity": "Positive"
     },
     {
       "Path": "ecad-In2_Cu.gbr",
-      "FileFunction": "Copper,L7,Inr",
+      "FileFunction": "Copper,L3,Inr",
       "FilePolarity": "Positive"
     },
     {
@@ -100,7 +100,7 @@
   "MaterialStackup": [
     {
       "Type": "Legend",
-      "Color": "White",
+      "Color": "Yellow",
       "Material": "Peters SD2692",
       "Name": "Top Silk Screen"
     },
@@ -110,7 +110,7 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Green",
+      "Color": "Black",
       "Thickness": 0.025,
       "Material": "Elpemer AS 2467 SM-DG",
       "Name": "Top Solder Mask"
@@ -161,7 +161,7 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Green",
+      "Color": "Black",
       "Thickness": 0.025,
       "Material": "Elpemer AS 2467 SM-DG",
       "Name": "Bottom Solder Mask"
@@ -172,7 +172,7 @@
     },
     {
       "Type": "Legend",
-      "Color": "White",
+      "Color": "Yellow",
       "Material": "Peters SD2692",
       "Name": "Bottom Silk Screen"
     }
