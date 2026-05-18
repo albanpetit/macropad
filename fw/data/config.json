@@ -1,0 +1,58 @@
+{
+  "brightness": 80,
+  "active_layer": 0,
+  "layers": [
+    {
+      "name": "Default",
+      "color": [0, 100, 255],
+      "keys": [
+        { "type": "key",      "code": 4  },
+        { "type": "key",      "code": 5  },
+        { "type": "key",      "code": 6  },
+        { "type": "key",      "code": 7  },
+        { "type": "key",      "code": 8  },
+        { "type": "key",      "code": 9  },
+        { "type": "key",      "code": 10 },
+        { "type": "key",      "code": 11 },
+        { "type": "consumer", "code": 205 },
+        { "type": "consumer", "code": 233 },
+        { "type": "consumer", "code": 234 },
+        { "type": "consumer", "code": 181 },
+        { "type": "key",      "code": 40 },
+        { "type": "key",      "code": 44 },
+        { "type": "key",      "code": 43 },
+        { "type": "key",      "code": 41 },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  }
+      ]
+    },
+    {
+      "name": "Media",
+      "color": [255, 50, 0],
+      "keys": [
+        { "type": "consumer", "code": 205 },
+        { "type": "consumer", "code": 183 },
+        { "type": "consumer", "code": 184 },
+        { "type": "consumer", "code": 233 },
+        { "type": "consumer", "code": 234 },
+        { "type": "consumer", "code": 181 },
+        { "type": "consumer", "code": 182 },
+        { "type": "consumer", "code": 180 },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  },
+        { "type": "key",      "code": 0  }
+      ]
+    }
+  ]
+}
