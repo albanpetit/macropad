@@ -1,12 +1,14 @@
 #include "matrix.h"
 
 void Matrix::begin() {
-    for (uint8_t c = 0; c < MATRIX_COLS; c++) {
-        pinMode(MATRIX_COL_PINS[c], OUTPUT);
-        digitalWrite(MATRIX_COL_PINS[c], HIGH);
-    }
+    // Rows = OUTPUT strobe (drive LOW one at a time)
     for (uint8_t r = 0; r < MATRIX_ROWS; r++) {
-        pinMode(MATRIX_ROW_PINS[r], INPUT_PULLUP);
+        pinMode(MATRIX_ROW_PINS[r], OUTPUT);
+        digitalWrite(MATRIX_ROW_PINS[r], HIGH);
+    }
+    // Cols = INPUT with pull-up (read LOW when key pressed)
+    for (uint8_t c = 0; c < MATRIX_COLS; c++) {
+        pinMode(MATRIX_COL_PINS[c], INPUT_PULLUP);
     }
 }
 
@@ -36,14 +38,14 @@ bool Matrix::justReleased(uint8_t row, uint8_t col) const {
 
 uint32_t Matrix::_readRaw() {
     uint32_t state = 0;
-    for (uint8_t c = 0; c < MATRIX_COLS; c++) {
-        digitalWrite(MATRIX_COL_PINS[c], LOW);
+    for (uint8_t r = 0; r < MATRIX_ROWS; r++) {
+        digitalWrite(MATRIX_ROW_PINS[r], LOW);
         delayMicroseconds(10);
-        for (uint8_t r = 0; r < MATRIX_ROWS; r++) {
-            if (!digitalRead(MATRIX_ROW_PINS[r]))
+        for (uint8_t c = 0; c < MATRIX_COLS; c++) {
+            if (!digitalRead(MATRIX_COL_PINS[c]))
                 state |= (1u << (r * MATRIX_COLS + c));
         }
-        digitalWrite(MATRIX_COL_PINS[c], HIGH);
+        digitalWrite(MATRIX_ROW_PINS[r], HIGH);
     }
     return state;
 }
