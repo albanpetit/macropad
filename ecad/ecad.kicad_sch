@@ -8941,7 +8941,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "DNP"
 			(at 207.01 55.88 90)
 			(show_name no)
 			(do_not_autoplace no)
