@@ -25,16 +25,18 @@
 static const uint8_t MATRIX_COL_PINS[MATRIX_COLS] = { 21, 20, 19, 18 };
 static const uint8_t MATRIX_ROW_PINS[MATRIX_ROWS] = { 26, 25, 24, 23, 22 };
 
-// ─── Encoder ──────────────────────────────────────────────────────────────────
-// TODO: verify these pins against the hardware
-#define PIN_ENC_CLK 16
-#define PIN_ENC_DT  17
-#define PIN_ENC_SW  2
+// ─── Encoders ─────────────────────────────────────────────────────────────────
+// Encoder 0 — navigation UI (TODO: verify pins against hardware)
+#define PIN_ENC0_CLK 16
+#define PIN_ENC0_DT  17
+#define PIN_ENC0_SW  2
 
-// ─── Potentiometers (ADC) ─────────────────────────────────────────────────────
-#define PIN_POT_1 27  // ADC1
-#define PIN_POT_2 28  // ADC2
-#define PIN_POT_3 29  // ADC3
+// Encoder 1 — media / volume
+#define PIN_ENC1_CLK 27
+#define PIN_ENC1_DT  28
+#define PIN_ENC1_SW  29
+
+#define ENCODER_COUNT 2
 
 // ─── Storage ──────────────────────────────────────────────────────────────────
 #define CONFIG_FILE "/config.json"

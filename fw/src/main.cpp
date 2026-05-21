@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <Keyboard.h>
 
 #include "config/config.h"
 #include "hal/matrix.h"
@@ -10,7 +11,8 @@
 #include "ui/ui.h"
 
 static Matrix    matrix;
-static Encoder   encoder;
+static Encoder   encoder0(PIN_ENC0_CLK, PIN_ENC0_DT, PIN_ENC0_SW);  // navigation
+static Encoder   encoder1(PIN_ENC1_CLK, PIN_ENC1_DT, PIN_ENC1_SW);  // media
 static Leds      leds;
 static Display   display;
 static HID       hid;
@@ -29,7 +31,8 @@ void setup() {
     storage.load(cfg);
 
     matrix.begin();
-    encoder.begin();
+    encoder0.begin();
+    encoder1.begin();
 
     leds.begin();
     leds.setBrightness(cfg.brightness);
@@ -75,17 +78,37 @@ void loop() {
         }
     }
 
-    // ── Encoder ───────────────────────────────────────────────────────────────
-    encoder.update();
-    int8_t delta = encoder.getDelta();
-    if (delta != 0) {
-        Serial.print("[enc] delta="); Serial.println(delta);
-        ui.onEncoderDelta(delta);
+    // ── Encoder 0 — navigation UI ─────────────────────────────────────────────
+    encoder0.update();
+    int8_t delta0 = encoder0.getDelta();
+    if (delta0 != 0) {
+        Serial.print("[enc0] delta="); Serial.println(delta0);
+        ui.onEncoderDelta(delta0);
         lastIdleTick = now;
     }
-    if (encoder.buttonPressed()) {
-        Serial.println("[enc] PRESS");
+    if (encoder0.buttonPressed()) {
+        Serial.println("[enc0] PRESS");
         ui.onEncoderPress();
+        lastIdleTick = now;
+    }
+
+    // ── Encoder 1 — volume ────────────────────────────────────────────────────
+    encoder1.update();
+    int8_t delta1 = encoder1.getDelta();
+    if (delta1 != 0) {
+        uint16_t code = (delta1 > 0) ? 0xE9 : 0xEA;  // vol+ / vol-
+        uint8_t steps = abs(delta1);
+        for (uint8_t s = 0; s < steps; s++) {
+            Keyboard.consumerPress((uint16_t)code);
+            Keyboard.consumerRelease();
+        }
+        Serial.print("[vol] "); Serial.println(delta1 > 0 ? "+" : "-");
+        lastIdleTick = now;
+    }
+    if (encoder1.buttonPressed()) {
+        Keyboard.consumerPress((uint16_t)0xE2);  // mute
+        Keyboard.consumerRelease();
+        Serial.println("[vol] MUTE");
         lastIdleTick = now;
     }
 
