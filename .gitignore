@@ -10,6 +10,10 @@ similar-project
 .vscode/launch.json
 .vscode/ipch
 
+## kicad history / logs
+ecad/.history/
+ecad/archive_3d_models.log
+
 ## kicad gitignore
 # Temporary files
 *.000
