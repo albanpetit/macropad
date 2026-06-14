@@ -1,59 +1,47 @@
-# Macropad
+# Makerpad
 
-Custom RP2040-based macropad with RGB LEDs, LVGL display, two rotary encoders and configurable key matrix.
+A fully open-source macropad built from scratch — custom PCB, 3D-printed enclosure, and embedded firmware. 20 programmable keys, two rotary encoders, a 2" color display driven by LVGL, and 22 addressable RGB LEDs, all running on an RP2040.
 
-## Hardware
+Everything is designed to be reproducible: order the PCB, print the case, flash the firmware, and configure your keymap via a JSON file.
 
-| Component | Part | Notes |
-|---|---|---|
-| MCU | RP2040 (LQFN-56) | 133 MHz, 264 KB RAM |
-| Flash | W25Q128JVP | 16 MB SPI flash |
-| Display | HS20HS072RX | 2" 240×320 ST7789V2-HSD SPI (portrait) |
-| LEDs | WS2812B-2020 × 22 | Addressable RGB, 5V |
-| LED buffer | SN74LV1T34DBV | 3.3V → 5V level shifter |
-| Key matrix | 4 cols × 5 rows | 20 keys |
-| Encoders | PEC12R-4225F-S0024 × 2 | 24 PPR + push button |
-| LDO | AP2112K-3.3V | 3.3V regulator |
-| Crystal | ABM8 12 MHz | 10 pF load |
+---
 
-## Architecture
+## What's inside
 
-```
-fw/
-├── src/
-│   ├── main.cpp              # Entry point, main loop
-│   ├── lv_conf.h             # LVGL compile-time config
-│   ├── config/
-│   │   ├── config.h          # Pin definitions, build constants
-│   │   └── keymap.h          # KeyDef, Layer types + default keymap
-│   ├── hal/
-│   │   ├── matrix.h/.cpp     # Key matrix scanning (4×5, debounce)
-│   │   ├── encoder.h/.cpp    # Rotary encoder via interrupt
-│   │   ├── leds.h/.cpp       # WS2812B via NeoPixel
-│   │   └── display.h/.cpp    # ST7789V2-HSD driver + LVGL flush bridge
-│   ├── hid/
-│   │   └── hid.h/.cpp        # USB HID (keyboard + consumer control)
-│   ├── storage/
-│   │   └── storage.h/.cpp    # LittleFS + ArduinoJson config persistence
-│   └── ui/
-│       └── ui.h/.cpp         # LVGL single-screen layer list
-└── data/
-    └── config.json           # Default config (flashed to LittleFS)
-```
+| Directory | Description |
+|---|---|
+| [`ecad/`](ecad/README.md) | KiCad schematic + PCB, BOM, custom footprints |
+| [`mcad/`](mcad/README.md) | STEP files for the enclosure |
+| `fw/` | PlatformIO firmware (C++, RP2040) |
+| `doc/` | Datasheets, iBOM, schematic PDF |
 
-## Getting Started
+---
 
-**Prerequisites:** [PlatformIO](https://platformio.org/)
+## Hardware at a glance
+
+| Component | Part |
+|---|---|
+| MCU | RP2040 (LQFN-56), 133 MHz, 264 KB RAM |
+| Flash | W25Q128JVP — 16 MB SPI |
+| Display | HS20HS072RX — 2" 240×320 ST7789V2-HSD SPI |
+| RGB LEDs | WS2812B-2020 × 22 — addressable, 5V |
+| Keys | 4 cols × 5 rows = 20 keys |
+| Encoders | PEC12R-4225F-S0024 × 2 — 24 PPR + push |
+| Connectivity | USB-C (HID keyboard + consumer control) |
+
+---
+
+## Firmware
+
+The firmware is built with [PlatformIO](https://platformio.org/). Keys, layers and LED settings are stored in a JSON config file on LittleFS — no recompilation needed to remap keys.
 
 ```bash
-pio run -e pico -t upload      # Flash firmware via USB
-pio run -e pico -t uploadfs    # Flash default config to LittleFS
+pio run -e pico -t upload      # Flash firmware
+pio run -e pico -t uploadfs    # Flash default config
 pio device monitor -e pico     # Serial monitor (115200 baud)
 ```
 
-## Key Configuration
-
-Keys are stored in `data/config.json` and loaded from LittleFS at boot. Each layer holds 20 key definitions (row-major, 4 cols × 5 rows).
+### Layer config
 
 ```json
 {
@@ -65,38 +53,49 @@ Keys are stored in `data/config.json` and loaded from LittleFS at boot. Each lay
       "color": [0, 100, 255],
       "keys": [
         { "type": "key",      "code": 4   },
-        { "type": "consumer", "code": 233 },
-        { "type": "key",      "code": 0   }
+        { "type": "consumer", "code": 233 }
       ]
     }
   ]
 }
 ```
 
-| Key type | Description |
-|---|---|
-| `key` | Standard HID keycode |
-| `consumer` | Consumer control (media, volume) |
-| `macro` | Sequence of keycodes *(planned)* |
+Key types: `key` (standard HID), `consumer` (media/volume), `macro` *(planned)*.
 
-## Controls
+### Controls
 
 | Control | Action |
 |---|---|
-| Encoder 0 rotate | Navigate layer list |
+| Encoder 0 rotate | Navigate layers |
 | Encoder 0 press | Activate selected layer |
-| Encoder 1 rotate | Volume up/down (speaker or mic) |
-| Encoder 1 press | Mute active device |
-| Encoder 1 long press (600ms) | Toggle speaker / mic mode |
+| Encoder 1 rotate | Volume up/down |
+| Encoder 1 press | Mute |
+| Encoder 1 long press (600 ms) | Toggle speaker / mic mode |
 
-## Contributing
+### Firmware architecture
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for commit convention and contribution guidelines.
+```
+fw/src/
+├── main.cpp              # Entry point, main loop
+├── config/               # Pin definitions, keymap types
+├── hal/                  # Matrix, encoders, LEDs, display
+├── hid/                  # USB HID (keyboard + consumer)
+├── storage/              # LittleFS + JSON persistence
+└── ui/                   # LVGL layer-list screen
+```
+
+---
 
 ## Roadmap
 
-- [x] Layer switching via encoder 0
-- [x] Encoder 1 speaker/mic volume control with mode toggle
+- [x] Layer switching via encoder
+- [x] Volume control with speaker/mic toggle
 - [ ] Macro sequence support
-- [ ] Per-key LED color in config
+- [ ] Per-key LED color from config
 - [ ] OTA config update via USB mass storage
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the commit convention, scope definitions, and contribution guidelines.
