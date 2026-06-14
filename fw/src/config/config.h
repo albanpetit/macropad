@@ -7,9 +7,9 @@
 #define PIN_LCD_BL   12
 #define PIN_LCD_RST  13
 #define PIN_LCD_DC   14
-#define LCD_WIDTH    320
-#define LCD_HEIGHT   240
-#define LCD_ROTATION 1   // 0=portrait, 1=landscape
+#define LCD_WIDTH    240
+#define LCD_HEIGHT   320
+#define LCD_ROTATION 0   // 0=portrait 240x320, 1=landscape 320x240
 
 // ─── LEDs ─────────────────────────────────────────────────────────────────────
 #define PIN_LED_DATA 3
