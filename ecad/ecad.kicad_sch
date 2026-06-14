@@ -8929,7 +8929,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "14d6d966-5bd9-4c44-a618-a08b4969ecb5")
 		(property "Reference" "R4"
 			(at 207.01 54.102 90)
@@ -10868,7 +10868,7 @@
 				)
 			)
 		)
-		(property "Value" "DNF"
+		(property "Value" "0"
 			(at 194.31 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
