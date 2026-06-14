@@ -12,7 +12,7 @@ Everything is designed to be reproducible: order the PCB, print the case, flash 
 |---|---|
 | [`ecad/`](ecad/README.md) | KiCad schematic + PCB, BOM, custom footprints |
 | [`mcad/`](mcad/README.md) | STEP files for the enclosure |
-| `fw/` | PlatformIO firmware (C++, RP2040) |
+| [`fw/`](fw/README.md) | PlatformIO firmware (C++, RP2040) |
 | `doc/` | Datasheets, iBOM, schematic PDF |
 
 ---
@@ -28,61 +28,6 @@ Everything is designed to be reproducible: order the PCB, print the case, flash 
 | Keys | 4 cols × 5 rows = 20 keys |
 | Encoders | PEC12R-4225F-S0024 × 2 — 24 PPR + push |
 | Connectivity | USB-C (HID keyboard + consumer control) |
-
----
-
-## Firmware
-
-The firmware is built with [PlatformIO](https://platformio.org/). Keys, layers and LED settings are stored in a JSON config file on LittleFS — no recompilation needed to remap keys.
-
-```bash
-pio run -e pico -t upload      # Flash firmware
-pio run -e pico -t uploadfs    # Flash default config
-pio device monitor -e pico     # Serial monitor (115200 baud)
-```
-
-### Layer config
-
-```json
-{
-  "brightness": 80,
-  "active_layer": 0,
-  "layers": [
-    {
-      "name": "Default",
-      "color": [0, 100, 255],
-      "keys": [
-        { "type": "key",      "code": 4   },
-        { "type": "consumer", "code": 233 }
-      ]
-    }
-  ]
-}
-```
-
-Key types: `key` (standard HID), `consumer` (media/volume), `macro` *(planned)*.
-
-### Controls
-
-| Control | Action |
-|---|---|
-| Encoder 0 rotate | Navigate layers |
-| Encoder 0 press | Activate selected layer |
-| Encoder 1 rotate | Volume up/down |
-| Encoder 1 press | Mute |
-| Encoder 1 long press (600 ms) | Toggle speaker / mic mode |
-
-### Firmware architecture
-
-```
-fw/src/
-├── main.cpp              # Entry point, main loop
-├── config/               # Pin definitions, keymap types
-├── hal/                  # Matrix, encoders, LEDs, display
-├── hid/                  # USB HID (keyboard + consumer)
-├── storage/              # LittleFS + JSON persistence
-└── ui/                   # LVGL layer-list screen
-```
 
 ---
 
