@@ -89,6 +89,10 @@ Keys are stored in `data/config.json` and loaded from LittleFS at boot. Each lay
 | Encoder 1 press | Mute active device |
 | Encoder 1 long press (600ms) | Toggle speaker / mic mode |
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for commit convention and contribution guidelines.
+
 ## Roadmap
 
 - [x] Layer switching via encoder 0
